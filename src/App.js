@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import EachProduct from './pages/EachProduct';
+import Cart from './pages/Cart';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home products={products} filterQuery={filterQuery} setFilterQuery={setFilterQuery} />} />
           <Route path="/product/:id" element={<EachProduct  />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
     </Router>
 

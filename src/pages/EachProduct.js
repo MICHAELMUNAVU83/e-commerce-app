@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext} from "react";
 import { useParams } from "react-router-dom";
 import { MdOutlineHotelClass } from "react-icons/md";
+import { RoomContext } from "../context";
 
 function EachProduct() {
+    const { addCart } = useContext(RoomContext);
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [rating, setRating] = useState("");
@@ -18,7 +20,7 @@ function EachProduct() {
   return (
     <div className="d-flex justify-content-center container mt-5">
       <div className="card p-3 bg-white">
-        <MdOutlineHotelClass />
+        <MdOutlineHotelClass style={{ fontSize: "30px" , color: "#f55a98"}} />
         <div className="about-product text-center mt-2">
           <img src={product.image} alt="product" style={{ height: "300px" }} />
           <div>
@@ -50,6 +52,7 @@ function EachProduct() {
               padding: "10px 20px",
               marginTop: "20px",
             }}
+            onClick={() => addCart(product)}
           >
             Add to Cart
           </button>
