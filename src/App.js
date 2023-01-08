@@ -1,6 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
 import Products from './components/Products';
+
 function App() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -12,11 +15,13 @@ function App() {
       });
   }, []);
   return (
-    <div className="App">
-      
+    <Router>
+      <NavBar />
+        <Routes>
+          <Route path="/" element={<Products products={products} />} />
+        </Routes>
+    </Router>
 
-     
-    </div>
   );
 }
 
