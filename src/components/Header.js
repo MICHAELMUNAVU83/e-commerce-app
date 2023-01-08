@@ -4,7 +4,7 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { WiStrongWind } from "react-icons/wi";
 import { TbTruckDelivery } from "react-icons/tb";
 
-function Header() {
+function Header({ filterQuery, setFilterQuery }) {
   return (
     <div>
       <div className="header-div">
@@ -57,6 +57,14 @@ function Header() {
             <p>Fast Delivery Products</p>
           </div>
         </div>
+      </div>
+
+      <div className="container d-flex justify-content-center py-5">
+        <input type="text" placeholder="Search for a product" className="form-control w-50" value={filterQuery} onChange={(e) => {
+          setFilterQuery(e.target.value)
+          console.log(e.target.value)
+        }
+        } />
       </div>
     </div>
   );
