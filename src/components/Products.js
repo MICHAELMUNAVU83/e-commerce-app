@@ -1,6 +1,7 @@
 import React from 'react'
 import Product from './Product'
 
+
 function Products({ products }) {
   return (
     <div className="products-div">
@@ -11,4 +12,4 @@ function Products({ products }) {
     )
 }
 
-export default Products
+export default Products;

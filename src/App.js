@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Products from './components/Products';
+import Home from './pages/Home';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -18,7 +18,7 @@ function App() {
     <Router>
       <NavBar />
         <Routes>
-          <Route path="/" element={<Products products={products} />} />
+          <Route path="/" element={<Home products={products} />} />
         </Routes>
     </Router>
 
