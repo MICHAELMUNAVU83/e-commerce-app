@@ -9,9 +9,9 @@ function Header({ filterQuery, setFilterQuery }) {
     <div>
       <div className="header-div">
         <div className="header-text d-flex flex-column align-items-start justify-content-center py-5 px-5">
-          <h3>Clothes Store</h3>
-          <h1>Making beautiful clothes</h1>
-          <h1>A Part of your life</h1>
+          <h3 className="bakbak-font">Clothes Store</h3>
+          <h1 className="fjalla-font">Making beautiful clothes</h1>
+          <h1 className="fjalla-font">A Part of your life</h1>
 
           <button
             style={{

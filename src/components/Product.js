@@ -8,7 +8,7 @@ function Product({ product }) {
       <img className="card-img-top img-fluid"  src={product.image} alt="Card image cap" style={{height: "300px"}} />
       <div className="card-body">
         <p className="card-text text-center">
-            <h5>{product.title}</h5>
+            <h5 className="sofia-font  font-bold">{product.title}</h5>
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { RoomContext } from "../context";
-import { Link } from "react-router-dom";
+import EachCartProduct from "../components/EachCartProduct";
 
 function Cart() {
   const { saved } = useContext(RoomContext);
@@ -8,25 +8,19 @@ function Cart() {
 
   if (saved.length === 0) {
     return (
-      <div key="no-houses" className="no-houses-div">
+      <div key="no-houses" className="d-flex flex-wrap container justify-content-center my-2">
         <div>
-          <h3>NO HOUSES SAVED YET</h3>
+          <h3>NO CLOTHES IN CART</h3>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="saved-rooms-div">
-        {saved.map((save) => (
-          <div key={save.id} className="saved-rooms">
-            <div className="saved-rooms-img">
-              <img src={save.image} alt="saved room" />
-            </div>
-            <button onClick={() => removeFromArray(save.id)}>Remove</button>
-            
-          </div>
+        <div className="d-flex flex-wrap container justify-content-center my-2">
+        {saved.map((product) => (
+            <EachCartProduct key={product.id} product={product} removeFromArray={removeFromArray} />
         ))}
-      </div>
+    </div>
     );
   }
 }

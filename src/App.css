@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fjalla+One&family=Italiana&family=Italianno&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap');
 .header-div{
   background-image: url(./components/header.jpg);
   background-size: cover;
@@ -6,4 +7,20 @@
   height: 60vh;
   width: 100%;
   
+}
+
+.italic-font{
+  font-family: 'Italianno', cursive;
+}
+.bakbak-font{
+  font-family: 'Bakbak One', cursive;
+}
+.fjalla-font{
+  font-family: 'Fjalla One', sans-serif;
+}
+.sofia-font{
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+.italian-font{
+  font-family: 'Italiana', serif;
 }
