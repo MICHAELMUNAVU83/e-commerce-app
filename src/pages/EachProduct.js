@@ -15,7 +15,7 @@ function EachProduct() {
         setProduct(data);
         setRating(Math.floor(data.rating.rate));
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="d-flex justify-content-center container mt-5">

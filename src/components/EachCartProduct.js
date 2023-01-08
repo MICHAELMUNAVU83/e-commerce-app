@@ -1,13 +1,10 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import { MdOutlineHotelClass } from "react-icons/md";
 
 
 function EachCartProduct({ product, removeFromArray }) {
-    const [rating, setRating] = useState("");
-    useEffect(() => {
-        setRating(Math.floor(product.rating.rate));
-        }, []);
-
+   
+  
   return (
    
     <div className="card p-3 bg-white mx-3" style={{ width: "22rem", height: "600px" }} >
