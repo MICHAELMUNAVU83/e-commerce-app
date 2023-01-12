@@ -10,7 +10,7 @@ function EachCartProduct({ product, removeFromArray }) {
     <div className="card p-3 bg-white mx-3" style={{ width: "22rem", height: "600px" }} >
       <MdOutlineHotelClass style={{ fontSize: "30px" , color: "#f55a98"}} />
       <div className="about-product text-center mt-2">
-        <img src={product.image} alt="product" style={{ height: "300px" }} />
+        <img src={product.image} alt="product" style={{height: "300px", width: "300px"}}/>
         <div>
           <h4>{product.title}</h4>
           <h6 className="mt-0 text-black-50">{product.category}</h6>
