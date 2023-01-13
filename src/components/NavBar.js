@@ -21,6 +21,12 @@ function NavBar() {
 
         <h2 className="italic-font">HOME</h2>
       </Link>
+
+      <Link to="/checkout" className="d-flex justify-content-center mx-4 text-decoration-none text-dark fw-bold">
+        <h2 className="italic-font text-center text-decoration-none">
+          CHECKOUT
+        </h2>
+      </Link>
       <Link
         to="/cart"
         style={{ textDecoration: "none", color: "black" }}
@@ -33,7 +39,6 @@ function NavBar() {
         />
         <h2 className="italic-font">{saved.length}</h2>
       </Link>
-      <Link to="/checkout">Checkout</Link>
     </nav>
   );
 }
